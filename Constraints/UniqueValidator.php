@@ -28,7 +28,28 @@ class UniqueValidator extends AbstractCompositeValidator
      */
     public function doValidate($value, Constraint $constraint)
     {
-        
+        if ($this->findRepeated($value)){
+
+            $this->context->addViolation($constraint->uniqueMessage, $params=array());
+        }
     }
 
+    /**
+     * Given a set of iterable elements, just checks if all elements are once
+     *
+     * @param Mixed $elements Elements to check
+     *
+     * @return boolean Elements in collection are once
+     */
+    private function findRepeated($elements)
+    {
+        $arrayUnique = array();
+
+        foreach ($elements as $element) {
+
+            $arrayUnique[serialize($element)] = $element;
+        }
+
+        return (count($arrayUnique) < count($elements));
+    }
 }

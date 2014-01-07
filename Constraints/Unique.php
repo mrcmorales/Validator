@@ -12,7 +12,7 @@
 namespace Symfony\Component\Validator\Constraints;
 
 
-use Symfony\Component\Validator\Constraints\AbstractComposite;
+use Symfony\Component\Validator\Constraint;
 
 /**
  * @Annotation
@@ -21,9 +21,14 @@ use Symfony\Component\Validator\Constraints\AbstractComposite;
  * @author Marc Morales Valldepérez <marcmorales83@gmail.com>
  *
  * @api
- *
  */
-class Unique extends AbstractComposite
+class Unique extends Constraint
 {
 
+    /**
+     * @var string
+     *
+     * Message for notice Exactly Violation
+     */
+    public $uniqueMessage = 'This collection has repeated elements';
 }

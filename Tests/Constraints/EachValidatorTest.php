@@ -17,6 +17,12 @@ use Symfony\Component\Validator\Constraints\NotNull;
 use Symfony\Component\Validator\Constraints\Each;
 use Symfony\Component\Validator\Constraints\EachValidator;
 
+/**
+ * @author Marc Morera Merino <hyuhu@mmoreram.com>
+ * @author Marc Morales Valldepérez <marcmorales83@gmail.com>
+ *
+ * @api
+ */
 class EachValidatorTest extends \PHPUnit_Framework_TestCase
 {
     protected $context;

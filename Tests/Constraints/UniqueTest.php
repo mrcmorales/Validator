@@ -9,23 +9,22 @@
  * file that was distributed with this source code.
  */
 
-namespace Symfony\Component\Validator\Tests\Fixtures;
+namespace Symfony\Component\Validator\Tests\Constraints;
 
-use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Component\Validator\Constraints\Unique;
+use Symfony\Component\Validator\Constraints\Valid;
 
 /**
  * @author Marc Morera Merino <hyuhu@mmoreram.com>
  * @author Marc Morales Valldepérez <marcmorales83@gmail.com>
+ *
+ * @api
  */
-class EntityCollection
+class UniqueTest extends \PHPUnit_Framework_TestCase
 {
-    /**
-     *
-     */
-    protected $collection = array(1,2,3);
 
-    /**
-     *
-     */
-    protected $collectionNotUnique = array(1,2,3,1,2);
+    public function testSuccess()
+    {
+        new Unique();
+    }
 }

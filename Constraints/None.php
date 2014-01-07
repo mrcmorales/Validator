@@ -25,6 +25,7 @@ use Symfony\Component\Validator\Exception\MissingOptionsException;
  */
 class None extends AbstractComposite
 {
+
     /**
      * @var string
      *

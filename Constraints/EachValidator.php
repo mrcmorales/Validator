@@ -23,6 +23,10 @@ use Symfony\Component\Validator\Constraints\AbstractCompositeValidator;
  */
 class EachValidator extends AbstractCompositeValidator
 {
+
+    /**
+     * {@inheritDoc}
+     */
     public function doValidate($value, Constraint $constraint)
     {
         $group = $this->context->getGroup();

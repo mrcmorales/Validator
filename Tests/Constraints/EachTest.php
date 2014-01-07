@@ -17,6 +17,8 @@ use Symfony\Component\Validator\Constraints\Valid;
 /**
  * @author Marc Morera Merino <hyuhu@mmoreram.com>
  * @author Marc Morales Valldepérez <marcmorales83@gmail.com>
+ *
+ * @api
  */
 class EachTest extends \PHPUnit_Framework_TestCase
 {
